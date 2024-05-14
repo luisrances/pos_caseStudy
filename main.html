@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="js/navbar.js"></script>
+    <header class="header">
+        <nav class="nav container">
+            <!-- <div class="nav__data">
+                <a href="#" class="nav__logo">
+                    
+                </a>
+                <h1>DEKATALON</h1>
+            </div> -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="" class="nav__link">DEKATALON</a></li>
+                </ul>
+            </div>
+
+            <!-- nav menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#homepage" class="nav__link">Homepage</a></li>
+                    <li><a href="#shop" class="nav__link">Shop</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="login.html" class="nav__link">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- end navbar -->
+
+    <!-- homepage -->
+    <link rel="stylesheet" href="css/homepage.css">
+    <a name="homepage"></a>
+    <div class="home-container">
+        <div class="home">
+            <div class="text-container">
+                <p>Unleash Your Inner Athlete: Exclusive Sports Gear Now Available!</p>
+                <h1>Giving you the best sportsware at the best possible price</h1>
+                <button class="homepage-button" role="button"><a href="#shop" id="shop-now">Shop Now</a></button>
+                <div class="socials-container"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end homepage -->
+
+    <!-- shop -->
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/shop.js" async defer></script>
+    <a name="shop"></a>
+    <div class="shop-container">
+
+        <div class="select-category">
+            <div class="top">
+                <button class="btn-category" id="try">Badminton</button>
+                <button class="btn-category">Basketball</button>
+                <button class="btn-category">Volleyball</button>
+                <button class="btn-category">Baseball</button>
+                <button class="btn-category">Football</button>
+            </div>
+            <div class="foot">
+                <button class="btn-category" onclick="showCart()">
+                    <img id="btn-checkout"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        Checkout
+                </button>
+            </div>
+        </div>
+
+        <section class="cards">
+            <!-- <div class="card-min-size"></div>
+            <div class="card-min-size"></div>
+            <div class="card-min-size"></div> -->
+
+            <article class="card card--1">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(1)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Shuttlecock</span>
+                    <h3 class="card__title">YONEX Mavis 350</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+            
+            <article class="card card--2">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(2)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Shuttlecock</span>
+                    <h3 class="card__title">YONEX AS 30</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--3">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(3)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Shuttlecock</span>
+                    <h3 class="card__title">RSL Tourney 4</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--4">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(4)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Shuttlecock</span>
+                    <h3 class="card__title">HEAD Glider 505</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--5">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(5)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Shuttlecock</span>
+                    <h3 class="card__title">Li-Ning Champ</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--6">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(6)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Yonex Astrox 100 ZZ</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--7">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(7)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Babolat Satelite Gravity 74</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--8">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(8)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Victor JetSpeed S 12</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--9">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(9)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Yonex Astrox 88D PRO</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--10">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(10)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Yonex Astrox 88S Pro</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--11">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(11)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Li-Ning G Force Super Lite</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--12">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(12)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Yonex Astrox 0.7 DG</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--13">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(13)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Yonex Arcsaber 71 Light</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+
+            <article class="card card--14">
+                <div class="card__info-hover">
+                    <img class="card__like" onclick="addToCart(14)"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                    <div class="card__clock-info">
+                        <span class="card__time">15% off</span>
+                    </div>
+                </div>
+                <div class="card__img"></div>
+                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Badminton Racket</span>
+                    <h3 class="card__title">Yonex Astrox 100 Game</h3>
+                    <span class="card__by">php 3,000.00</span>
+                </div>
+            </article>
+        
+        </section>
+
+    </div>
+    <!-- end shop -->
+
+    <!-- cart -->
+    <div id="cartContainer">
+        <div class="center">
+            <button id="cart-exit" class="btn">X</button>
+            <div id="cartItems">
+                    <p>Cart Items</p>
+                    <div id="cartList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal-checkout  -->
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- The popup container -->
+    <div id="popup-container">
+        <!-- The popup content will be generated here -->
+        <div class="center">
+            <button id="popup-exit" class="btn">X</button>
+            <div id="popup-content">
+                <div class="image-container">
+                    <img id="product_img" src="" alt="Product Image">
+                </div>
+                <div class="text-container">
+                    <p id="product_name"></p>
+                    <p id="product_price"></p>
+                    <p id="product_desc"></p>
+                </div>
+                <div class="number">
+                    <button class="minus" onclick="minus()">-</button>
+                    <input type="text" value="1" id="txtQuantity"/>
+                    <button class="plus" onclick="add()">+</button>
+                </div>
+                <p id="lblPrice">price: </p>
+                <div class="button-container">
+                    <button id="btnAddToCart" onclick="addToCart()">Add to cart</button>
+                    <button id="buyNow">Buy now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- contact info -->
+    <div class="address-container" id="address-container">
+        <div class="center">
+            <form action="">
+                <h2>Contact Information</h2>
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Home Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <input type="submit" id="btnAddress" onclick="popupOrderSuccess()">
+            </form>
+            
+        </div>
+    </div>
+    <!-- modal buy now -->
+    <div id="buynow-container">
+        <div class="center">
+            <div class="card-buynow">
+                <div class="header-buynow">
+                    <div class="image">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                            <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#000000"
+                                    d="M20 7L9.00004 18L3.99994 13"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="content">
+                        <span class="title">Order validated</span>
+                        <p class="message">Thank you for your purchase. you package will be delivered within 2 days of your
+                            purchase
+                        </p>
+                    </div>
+                    <div class="actions">
+                        <button type="button" id="btnOk">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- about -->
+    <link rel="stylesheet" href="css/about.css">
+    <a name="about"></a>
+    <div class="about-container">
+        <div class="image-1">
+
+        </div>
+        <div class="image-2"></div>
+        <div class="image-3"></div>
+        <div class="text-container">
+            <h1>About us</h1>
+            <p>Welcome to our sportswear haven! At "DEKATALON", we’re passionate about helping athletes and fitness enthusiasts
+            perform at their best. Whether you’re a seasoned pro or just starting your fitness journey, we’ve got you covered. Our
+            mission is simple: to provide top-quality sportswear and equipment that empowers you to conquer any challenge.</p>
+        </div>
+    </div>
+    <!-- end about -->
+
+    <!-- contact -->
+    <link rel="stylesheet" href="css/contact.css">
+    <a name="contact"></a>
+    <div class="contact-container">
+
+        <div id="contact" class="contact segments">
+            <div class="container">
+                <div class="box-content">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="content-left">
+                                <div class="section-title section-title-left">
+                                    <h3>Contact Me</h3>
+                                </div>
+                                <h2>Realize your dream with us</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-google"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="content-right">
+                                <!-- <form action="#" class="contact-form" id="contact-form" method="post"> -->
+                                    <div class="row">
+                                        <div class="col">
+                                            <div id="first-name-field">
+                                                <input type="text" placeholder="First Name" class="form-control"
+                                                    name="form-name">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div id="last-name-field">
+                                                <input type="text" placeholder="Last Name" class="form-control"
+                                                    name="form-name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div id="email-field">
+                                                <input type="email" placeholder="Email Address" class="form-control"
+                                                    name="form-email">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div id="subject-field">
+                                                <input type="text" placeholder="Subject" class="form-control"
+                                                    name="form-subject">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div id="message-field">
+                                                <textarea cols="30" rows="5" class="form-control" id="form-message"
+                                                    name="form-message" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button" id="submit" name="submit">Send Message</button>
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- end contact -->
+
+    <!-- modal -->
+    <!-- <link rel="stylesheet" href="css/modal.css">
+    <div class="modal">
+        <section class="mymodal hidden">
+            <div class="flex">
+                <button class="btn-close">⨉</button>
+            </div>
+            <div>
+                <h3>Stay in touch</h3>
+                <p>
+                    This is a dummy newsletter form so don't bother trying to test it. Not
+                    that I expect you to, anyways. :)
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <div class="overlay hidden"></div>
+    <button class="modal-btn btn-open">Open Modal</button> -->
+
+</body>
+
+</html>
