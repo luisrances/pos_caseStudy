@@ -36,6 +36,8 @@ body::-webkit-scrollbar {
     background-size: 100%;
     background-repeat: no-repeat;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .home-container .text-container {

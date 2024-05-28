@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -24,7 +25,7 @@
             </div> -->
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li><a href="" class="nav__link">DEKATALON</a></li>
+                    <li><a href="#" class="nav__link">DEKATALON</a></li>
                 </ul>
             </div>
 
@@ -54,7 +55,7 @@
             <div class="text-container">
                 <p>Unleash Your Inner Athlete: Exclusive Sports Gear Now Available!</p>
                 <h1>Giving you the best sportsware at the best possible price</h1>
-                <button class="homepage-button" role="button"><a href="#shop" id="shop-now">Shop Now</a></button>
+                <button class="homepage-button" role="button" onclick="location.href='#shop'">Shop Now</button>
                 <div class="socials-container"></div>
             </div>
         </div>
@@ -66,14 +67,14 @@
     <script src="js/shop.js" async defer></script>
     <a name="shop"></a>
     <div class="shop-container">
-
+        <div class="spacer"></div>
         <div class="select-category">
             <div class="top">
-                <button class="btn-category" id="try">Badminton</button>
-                <button class="btn-category">Basketball</button>
-                <button class="btn-category">Volleyball</button>
-                <button class="btn-category">Baseball</button>
-                <button class="btn-category">Football</button>
+                <button class="btn-category" onclick="showbadminton()" id="try">Badminton</button>
+                <button class="btn-category" onclick="showbasketball()">Basketball</button>
+                <button class="btn-category" onclick="showvolleyball()">Volleyball</button>
+                <button class="btn-category" onclick="showbaseball()">Baseball</button>
+                <button class="btn-category" onclick="showfootball()">Football</button>
             </div>
             <div class="foot">
                 <button class="btn-category" onclick="showCart()">
@@ -83,298 +84,628 @@
                 </button>
             </div>
         </div>
-
-        <section class="cards">
+        <section class="cards" id="cards">
             <!-- <div class="card-min-size"></div>
             <div class="card-min-size"></div>
             <div class="card-min-size"></div> -->
 
-            <article class="card card--1">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(1)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+            <div id="badminton" class="category">
+                <article class="card card--1">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">5% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Shuttlecock</span>
-                    <h3 class="card__title">YONEX Mavis 350</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-            
-            <article class="card card--2">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(2)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Shuttlecock</span>
+                        <h3 class="card__title">YONEX Mavis 350</h3>
+                        <span class="card__by">php 600.00</span>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Shuttlecock</span>
-                    <h3 class="card__title">YONEX AS 30</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
+                </article>
+                
+                <article class="card card--2">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index2)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Shuttlecock</span>
+                        <h3 class="card__title">YONEX AS 30</h3>
+                        <span class="card__by">php 400.00</span>
+                    </div>
+                </article>
+                
+                <article class="card card--3">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index3)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Shuttlecock</span>
+                        <h3 class="card__title">RSL Tourney 4</h3>
+                        <span class="card__by">php 600.00</span>
+                    </div>
+                </article>
+                
+                <article class="card card--4">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index4)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Shuttlecock</span>
+                        <h3 class="card__title">HEAD Glider 505</h3>
+                        <span class="card__by">php 500.00</span>
+                    </div>
+                </article>
+                
+                <article class="card card--5">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index5)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Shuttlecock</span>
+                        <h3 class="card__title">Li-Ning Champ</h3>
+                        <span class="card__by">php 600.00</span>
+                    </div>
+                </article>
+                
+                <article class="card card--6">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index6)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Racket</span>
+                        <h3 class="card__title">Yonex Astrox 100 ZZ</h3>
+                        <span class="card__by">php 2,200.00</span>
+                    </div>
+                </article>
+                
+                <article class="card card--7">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index7)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Racket</span>
+                        <h3 class="card__title">Victor JetSpeed S 12</h3>
+                        <span class="card__by">php 2,100.00</span>
+                    </div>
+                </article>
+                
+                <article class="card card--8">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index8)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Badminton Racket</span>
+                        <h3 class="card__title">Yonex Astrox 88D PRO</h3>
+                        <span class="card__by">php 2,000.00</span>
+                    </div>
+                </article>
+            </div>
+                
+            <div id="basketball" class="category">
+                <article class="card card--9">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index9)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Basketball</span>
+                        <h3 class="card__title">Wilson NBA Authentic Series</h3>
+                        <span class="card__by">php 2,500.00</span>
+                    </div>
+                </article>
+                <article class="card card--10">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index10)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Basketball</span>
+                        <h3 class="card__title">Champion Sports Pro Style</h3>
+                        <span class="card__by">php 1,500.00</span>
+                    </div>
+                </article>
+                <article class="card card--11">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index11)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Basketball</span>
+                        <h3 class="card__title">Wilson Evolution Game</h3>
+                        <span class="card__by">php 4,000.00</span>
+                    </div>
+                </article>
+                <article class="card card--12">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index12)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Basketball</span>
+                        <h3 class="card__title">Spalding Marble Series Outdoor</h3>
+                        <span class="card__by">php 2,000.00</span>
+                    </div>
+                </article>
+                <article class="card card--13">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index13)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Basketball</span>
+                        <h3 class="card__title">Wilson NCAA Killer Crossover</h3>
+                        <span class="card__by">php 2,700.00</span>
+                    </div>
+                </article>
+            </div>
 
-            <article class="card card--3">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(3)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+            <div id="volleyball" class="category">
+                <article class="card card--14">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Shuttlecock</span>
-                    <h3 class="card__title">RSL Tourney 4</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index14)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Volleyball</span>
+                        <h3 class="card__title">Mikasa V200W</h3>
+                        <span class="card__by">php 6,300.00</span>
+                    </div>
+                </article>
+                <article class="card card--15">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index15)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Volleyball</span>
+                        <h3 class="card__title">Mikasa MR2 Sports</h3>
+                        <span class="card__by">php 3,900.00</span>
+                    </div>
+                </article>
+                <article class="card card--16">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index16)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Volleyball</span>
+                        <h3 class="card__title">Molten V5M5000</h3>
+                        <span class="card__by">php 6,100.00</span>
+                    </div>
+                </article>
+                <article class="card card--17">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index17)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Volleyball</span>
+                        <h3 class="card__title">Molten MIKASA V300W</h3>
+                        <span class="card__by">php 1,400.00</span>
+                    </div>
+                </article>
+            </div>
 
-            <article class="card card--4">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(4)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+            <div id="baseball" class="category">
+                <article class="card card--18">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Shuttlecock</span>
-                    <h3 class="card__title">HEAD Glider 505</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index18)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball</span>
+                        <h3 class="card__title">Kipsta 11" BA100 Foam Baseball Single Ball</h3>
+                        <span class="card__by">php 150.00</span>
+                    </div>
+                </article>
+                <article class="card card--19">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index19)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball</span>
+                        <h3 class="card__title">All-American Blank</h3>
+                        <span class="card__by">php 500.00</span>
+                    </div>
+                </article>
+                <article class="card card--20">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index20)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball</span>
+                        <h3 class="card__title">SKLZ Baseball</h3>
+                        <span class="card__by">php 450.00</span>
+                    </div>
+                </article>
+                <article class="card card--21">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">20% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index21)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball Bats</span>
+                        <h3 class="card__title">Marucci CAT9 CONNECT</h3>
+                        <span class="card__by">php 14,050.00</span>
+                    </div>
+                </article>
+                <article class="card card--22">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">10% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index22)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball Bats</span>
+                        <h3 class="card__title">Louisville Slugger 2022</h3>
+                        <span class="card__by">php 10,100.00</span>
+                    </div>
+                </article>
+                <article class="card card--23">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">10% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index23)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball Bats</span>
+                        <h3 class="card__title">DeMarini 2022</h3>
+                        <span class="card__by">php 22,300.00</span>
+                    </div>
+                </article>
+                <article class="card card--24">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">10% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index24)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball Bats</span>
+                        <h3 class="card__title">Louisville Slugger 2019</h3>
+                        <span class="card__by">php 23,600.00</span>
+                    </div>
+                </article>
+                <article class="card card--25">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">10% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index25)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Baseball Bats</span>
+                        <h3 class="card__title">EASTON Ghost X Evolution</h3>
+                        <span class="card__by">php 24,700.00</span>
+                    </div>
+                </article>
+            </div>
 
-            <article class="card card--5">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(5)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+            <div id="football" class="category">
+                <article class="card card--26">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Shuttlecock</span>
-                    <h3 class="card__title">Li-Ning Champ</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--6">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(6)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index26)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Football</span>
+                        <h3 class="card__title">Nike Premier League Skills ball</h3>
+                        <span class="card__by">php 1,000.00</span>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Yonex Astrox 100 ZZ</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--7">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(7)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                </article>
+                <article class="card card--27">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Babolat Satelite Gravity 74</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--8">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(8)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index27)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Football</span>
+                        <h3 class="card__title">Nike USA Skills ball</h3>
+                        <span class="card__by">php 800.00</span>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Victor JetSpeed S 12</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--9">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(9)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                </article>
+                <article class="card card--28">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Yonex Astrox 88D PRO</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--10">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(10)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index28)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Football</span>
+                        <h3 class="card__title">Puma Orbita 1 La Liga Mini ball</h3>
+                        <span class="card__by">php 900.00</span>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Yonex Astrox 88S Pro</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--11">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(11)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                </article>
+                <article class="card card--29">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Li-Ning G Force Super Lite</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--12">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(12)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index29)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Football</span>
+                        <h3 class="card__title">adidas MLS Club ball</h3>
+                        <span class="card__by">php 1,100.00</span>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Yonex Astrox 0.7 DG</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--13">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(13)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                </article>
+                <article class="card card--30">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Yonex Arcsaber 71 Light</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
-
-            <article class="card card--14">
-                <div class="card__info-hover">
-                    <img class="card__like" onclick="addToCart(14)"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
-                    <div class="card__clock-info">
-                        <span class="card__time">15% off</span>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index30)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Football</span>
+                        <h3 class="card__title">Nike NWSL Academy ball</h3>
+                        <span class="card__by">php 2,000.00</span>
                     </div>
-                </div>
-                <div class="card__img"></div>
-                <a href="javascript:void(0)" onclick="displayProduct(index1)" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                    <span class="card__category">Badminton Racket</span>
-                    <h3 class="card__title">Yonex Astrox 100 Game</h3>
-                    <span class="card__by">php 3,000.00</span>
-                </div>
-            </article>
+                </article>
+                <article class="card card--31">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index31)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Football</span>
+                        <h3 class="card__title">Nike Flight ball</h3>
+                        <span class="card__by">php 9,300.00</span>
+                    </div>
+                </article>
+                <article class="card card--32">
+                    <div class="card__info-hover">
+                        <img class="card__like" onclick="addToCart()"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO3WrwrCQBzA8W+waFVQo/gIJpPB4hCsgqBPYDHrA4gvIZh8g3UNaza7OLOCYeDfiXBBLN7N305Bv3Dtx3243WCDX20OhGqtgOYn4BA4AUUsN1H4wDbcULBnG04BAXABsrZxV526YxvuPr1sUmv2Ci7EBG90Tr2MAR7rwKMY4JYOXBFGr0BOB04AO0F4gUFTQXhoArcF4aoJnAHOAmgAJDHME4BdItQXgHtR4DywfwPdAmkiVlaP/GgAHtQPRikq+rvV1dfFBxyBOe38h/tbC8x9P+yoTe+b1QTm/mGlGw7LH6npIjrWAAAAAElFTkSuQmCC">
+                        <div class="card__clock-info">
+                            <span class="card__time">15% off</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="javascript:void(0)" onclick="displayProduct(index32)" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Football</span>
+                        <h3 class="card__title">New Balance Dynamite Team ball</h3>
+                        <span class="card__by">php 1,700.00</span>
+                    </div>
+                </article>
+            </div>
         
         </section>
-
     </div>
     <!-- end shop -->
 
+    <link rel="stylesheet" href="css/modal.css">
     <!-- cart -->
     <div id="cartContainer">
-        <div class="center">
-            <button id="cart-exit" class="btn">X</button>
+        <div class="center-cart">
+            <button id="cart-exit">X</button>
             <div id="cartItems">
                     <p>Cart Items</p>
                     <div id="cartList"></div>
             </div>
+            <button id="buyNow_checkout">Buy now</button>
         </div>
     </div>
 
-    <!-- modal-checkout  -->
-    <link rel="stylesheet" href="css/modal.css">
     <!-- The popup container -->
     <div id="popup-container">
-        <!-- The popup content will be generated here -->
         <div class="center">
             <button id="popup-exit" class="btn">X</button>
             <div id="popup-content">
@@ -403,33 +734,48 @@
     <!-- contact info -->
     <div class="address-container" id="address-container">
         <div class="center">
-            <form action="">
-                <h2>Contact Information</h2>
-                <div class="form-group">
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" required>
+            <h2>Delivery Information</h2>
+            <div class="flex-delivery">
+                <div class="information">
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" required>
+    
+                <div class="modeOfPayment">
+                    <div class="form-group">
+                        <label for="address">Home Address:</label>
+                        <textarea id="address" name="address" rows="1" required></textarea>
+                    </div>
+                    <label for="paymentMethod">Select Payment Method:</label>
+                    <select id="paymentMethod" name="paymentMethod" onchange="handlePaymentMethod()">
+                        <option class="option" value="cash" style="height: 40px;">Cash on Delivery</option>
+                        <option class="option" value="ewallet">E-Wallet</option>
+                        <option class="option" value="creditcard">Credit Card</option>
+                        <option class="option" value="onlinebanking">Online Banking</option>
+                    </select>
+                    <div id="paymentDetails">
+                        <!-- Payment details fields will be dynamically added here -->
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact">Contact Number:</label>
-                    <input type="tel" id="contact" name="contact" required>
-                </div>
-                <div class="form-group">
-                    <label for="address">Home Address:</label>
-                    <textarea id="address" name="address" rows="4" required></textarea>
-                </div>
-                <input type="submit" id="btnAddress" onclick="popupOrderSuccess()">
-            </form>
-            
+            </div>
+            <input type="submit" id="btnAddress" onclick="popupOrderSuccess()">
         </div>
     </div>
+
     <!-- modal buy now -->
     <div id="buynow-container">
         <div class="center">
@@ -494,20 +840,6 @@
                                     <h3>Contact Me</h3>
                                 </div>
                                 <h2>Realize your dream with us</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-google"></i></a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -561,25 +893,64 @@
     </div>
     <!-- end contact -->
 
-    <!-- modal -->
-    <!-- <link rel="stylesheet" href="css/modal.css">
-    <div class="modal">
-        <section class="mymodal hidden">
-            <div class="flex">
-                <button class="btn-close">⨉</button>
-            </div>
-            <div>
-                <h3>Stay in touch</h3>
-                <p>
-                    This is a dummy newsletter form so don't bother trying to test it. Not
-                    that I expect you to, anyways. :)
-                </p>
-            </div>
-        </section>
-    </div>
+    <!-- Site footer -->
+    <link rel="stylesheet" href="css/footer.css">
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify"> <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the
+                        upcoming programmers with the code. Focuses on providing the most efficient code or
+                        snippets as the code wants to be simple. We will help programmers build up concepts in different
+                        programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL
+                        and Algorithm.</p>
+                </div>
     
-    <div class="overlay hidden"></div>
-    <button class="modal-btn btn-open">Open Modal</button> -->
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="">C</a></li>
+                        <li><a href="">UI Design</a></li>
+                        <li><a href="">PHP</a></li>
+                        <li><a href="">Java</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Templates</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Contribute</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by
+                        <a href="#">Francis Luis Rances</a>.
+                    </p>
+                </div>
+    
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

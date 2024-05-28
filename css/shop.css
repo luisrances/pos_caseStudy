@@ -15,13 +15,8 @@
     margin: 0;
     width: 100%;
     height: 100vh;
-    padding: 87px 0 0 0;
+    /* padding: 90px 0 0 0; */
     display: flex;
-    /* display: -webkit-flex;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    align-items: center; */
     flex-flow: row wrap;
     background-color: #171c26;
 }
@@ -74,6 +69,7 @@
     height: 60px;
     margin: 10px 0;
     border-radius: 10px;
+    padding: 90px 0 90px 0;
 } 
 
 .btn-category:disabled {
@@ -92,94 +88,48 @@
     transform: translateY(0);
 }
 
+.spacer {
+    width: 100%;
+    height: 90px;
+    position: relative;
+    z-index: 3;
+    margin-bottom: -200px;
+    background-color: #171c26;
+}
+
 .cards {
     width: 80%;
+    overflow-x: scroll;
     display: flex;
-    display: -webkit-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+#badminton, 
+#basketball,
+#volleyball,
+#baseball,
+#football {
+    width: 100%;
+    display: flex;
     justify-content: center;
     -webkit-justify-content: center;
-
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
-    max-height: 100%;
-    background-color: #0c1015;
+    height: 100%;
+    /* background-color: #0c1015; */
     border-radius: 12px;
+    padding: 90px 0 0 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
-.cards::-webkit-scrollbar {
+#badminton::-webkit-scrollbar, #basketball::-webkit-scrollbar,#volleyball::-webkit-scrollbar,#baseball::-webkit-scrollbar,#football::-webkit-scrollbar {
     width: 0;
     color: transparent;
-}
-
-.card--1 .card__img,
-.card--1 .card__img--hover {
-    background-image: url(images/Picture1.png);
-}
-
-.card--2 .card__img,
-.card--2 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--3 .card__img,
-.card--3 .card__img--hover {
-    background-image: url(images/Picture2.jpg);
-}
-
-.card--4 .card__img,
-.card--4 .card__img--hover {
-    background-image: url(images/Picture3.jpg);
-}
-
-.card--5 .card__img,
-.card--5 .card__img--hover {
-    background-image: url(images/Picture4.jpg);
-}
-
-.card--6 .card__img,
-.card--6 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--7 .card__img,
-.card--7 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--8 .card__img,
-.card--8 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--9 .card__img,
-.card--9 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--10 .card__img,
-.card--10 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--11 .card__img,
-.card--11 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--12 .card__img,
-.card--12 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--13 .card__img,
-.card--13 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
-}
-
-.card--14 .card__img,
-.card--14 .card__img--hover {
-    background-image: url(images/aerosensa\ 30.jpg);
 }
 
 .card__like {
@@ -209,6 +159,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+    width: 270px;
     height: 235px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -240,14 +191,13 @@
 .card {
     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
     background-color: #fff;
-    /* width: 33.3%; */
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
     
-    width: 270px;
-    /* min-width: 300px; */
+    max-width: 270px;
+    max-height: 400px;
     margin: 20px 15px;
 }
 
@@ -304,4 +254,163 @@
 
 .card:hover .card__info-hover {
     opacity: 1;
+}
+
+/* image sources */
+.card--1 .card__img,
+.card--1 .card__img--hover {
+    background-image: url(images/a1.png);
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+    background-image: url(images/a2.jpg);
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+    background-image: url(images/a3.jpg);
+}
+
+.card--4 .card__img,
+.card--4 .card__img--hover {
+    background-image: url(images/a4.jpg);
+}
+
+.card--5 .card__img,
+.card--5 .card__img--hover {
+    background-image: url(images/a5.jpg);
+}
+
+.card--6 .card__img,
+.card--6 .card__img--hover {
+    background-image: url(images/a6.jpg);
+}
+
+.card--7 .card__img,
+.card--7 .card__img--hover {
+    background-image: url(images/a7.jpg);
+}
+
+.card--8 .card__img,
+.card--8 .card__img--hover {
+    background-image: url(images/a8.jpg);
+}
+
+.card--9 .card__img,
+.card--9 .card__img--hover {
+    background-image: url(images/b1.png);
+}
+
+.card--10 .card__img,
+.card--10 .card__img--hover {
+    background-image: url(images/b2.png);
+}
+
+.card--11 .card__img,
+.card--11 .card__img--hover {
+    background-image: url(images/b3.png);
+}
+
+.card--12 .card__img,
+.card--12 .card__img--hover {
+    background-image: url(images/b4.png);
+}
+
+.card--13 .card__img,
+.card--13 .card__img--hover {
+    background-image: url(images/b5.png);
+}
+
+.card--14 .card__img,
+.card--14 .card__img--hover {
+    background-image: url(images/c1.jpg);
+}
+.card--15 .card__img,
+.card--15 .card__img--hover {
+    background-image: url(images/c2.jpg);
+}
+
+.card--16 .card__img,
+.card--16 .card__img--hover {
+    background-image: url(images/c3.jpeg);
+}
+
+.card--17 .card__img,
+.card--17 .card__img--hover {
+    background-image: url(images/c4.jpg);
+}
+
+.card--18 .card__img,
+.card--18 .card__img--hover {
+    background-image: url(images/d1.png);
+}
+
+.card--19 .card__img,
+.card--19 .card__img--hover {
+    background-image: url(images/d2.png);
+}
+
+.card--20 .card__img,
+.card--20 .card__img--hover {
+    background-image: url(images/d3.png);
+}
+
+.card--21 .card__img,
+.card--21 .card__img--hover {
+    background-image: url(images/d4.png);
+}
+
+.card--22 .card__img,
+.card--22 .card__img--hover {
+    background-image: url(images/d5.png);
+}
+
+.card--23 .card__img,
+.card--23 .card__img--hover {
+    background-image: url(images/d6.png);
+}
+
+.card--24 .card__img,
+.card--24 .card__img--hover {
+    background-image: url(images/d7.png);
+}
+
+.card--25 .card__img,
+.card--25 .card__img--hover {
+    background-image: url(images/d8.png);
+}
+
+.card--26 .card__img,
+.card--26 .card__img--hover {
+    background-image: url(images/e1.png);
+}
+
+.card--27 .card__img,
+.card--27 .card__img--hover {
+    background-image: url(images/e2.png);
+}
+
+.card--28 .card__img,
+.card--28 .card__img--hover {
+    background-image: url(images/e3.png);
+}
+.card--29 .card__img,
+.card--29 .card__img--hover {
+    background-image: url(images/e4.png);
+}
+
+.card--30 .card__img,
+.card--30 .card__img--hover {
+    background-image: url(images/e5.png);
+}
+
+.card--31 .card__img,
+.card--31 .card__img--hover {
+    background-image: url(images/e6.png);
+}
+
+.card--32 .card__img,
+.card--32 .card__img--hover {
+    background-image: url(images/e7.png);
 }
