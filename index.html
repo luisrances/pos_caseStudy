@@ -8,10 +8,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
 </head>
 
 <body>
-    <div class="center">
+    <div class="center" id="login_form">
         <div class="label">
             <h1>LOGIN</h1>
         </div>
@@ -19,10 +20,10 @@
         <div class="form">
             <div class="login_page">
                 <div class="txt_field">
-                    <input type="text" name="email" id="email" placeholder="email" required onclick="clearTextbox()">
+                    <input type="text" name="email" id="email" placeholder="Email" required onclick="clearTextbox()">
                 </div>
                 <div class="txt_field">
-                    <input type="password" name="password" placeholder="password" id="password" required onclick="clearTextbox()">
+                    <input type="password" name="password" placeholder="Password" id="password" required onclick="clearTextbox()">
                 </div>
                 <div class="button_field">
                     <button id="btnLogin" onclick="login()">LOGIN</button>
@@ -36,47 +37,6 @@
         </div>
     </div>
 
-    <script>
-        // holder for email and password
-            var attempt = 0;
-
-            function clearTextbox() {
-                document.getElementById("email").innerHTML = "";
-                document.getElementById("password").innerHTML = "";
-            }
-            function openMainPage() {
-                window.location.href = "main.html";
-                return true;
-            }
-            function login() {
-                // retrieve accounts
-                var email = document.getElementById("email").value;
-                var pass = document.getElementById("password").value;
-                if (email == "admin" && pass == "admin") {
-                    attempt = 0;
-                    window.location.href = "main.html";
-                    document.getElementById("email").innerHTML = "";
-                    document.getElementById("password").innerHTML = "";
-                }
-                else {
-                    attempt++;
-                    // error
-                    document.getElementById("email").value = "";
-                    document.getElementById("password").value = "";
-                    alert("Wrong attempt please try again");
-                    if (attempt == 3) {
-                        document.getElementById("email").disabled = true;
-                        document.getElementById("password").disabled = true;
-                        document.getElementById("btnLogin").disabled = true;
-                        document.getElementById("email").innerHTML = "";
-                        document.getElementById("password").innerHTML = "";
-                        document.getElementById("email").value = null;
-                        document.getElementById("password").value = null;
-                        alert("You have entered 3 consecutive wrong attempts. Please try again!");
-                    }
-                }
-            }
-    </script>
 </body>
 
 </html>

@@ -19,13 +19,13 @@
     display: flex;
     flex-flow: row wrap;
     background-color: #171c26;
+    padding-bottom: 10px;
 }
 
 .select-category {
     width: 18%;
     height: 100%;
     padding: 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +38,6 @@
     height: 60px;
     margin: 10px 0;
     border-radius: 10px;
-
     appearance: none;
     border: 2px solid #f9f7f7;
     box-sizing: border-box;
